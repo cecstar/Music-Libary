@@ -30,13 +30,12 @@ var library = {
 // p02: Other Playlist - 1 tracks
 
 var printPlaylists = function () {
-  for ( var i in library.playlists) {
-    var listPlaylist = library.playlists[i].id +": " + library.playlists[i].name + " - " + library.playlists[i].tracks.length + " tracks";
+  for (var i in library.playlists) {
+    var listPlaylist = library.playlists[i].id + ": " + library.playlists[i].name + "-" + library.playlists[i].tracks.length + " tracks";
     console.log(listPlaylist);
   }
 }
 printPlaylists();
-
 
 // prints a list of all tracks, in the form:
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
@@ -44,9 +43,12 @@ printPlaylists();
 // t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
 var printTracks = function () {
-
+  for(var i in library.tracks) {
+    var listTracklist = library.tracks[i].id + ": " + library.tracks[i].name + " by " + library.tracks[i].album;
+    console.log(listTracklist);
+  }
 }
-
+printTracks();
 
 // prints a list of tracks for a given playlist, in the form:
 // p01: Coding Music - 2 tracks
